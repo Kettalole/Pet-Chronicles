@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+          box-sizing: border-box;
+          font-family: 'Roboto', sans-serif;
+      }
+      
+      html, body{
+      height: 100%;
+      }
+      
+      body{
+          background-size: cover;
+          display: grid;
+          place-content: center;
+          margin: 0;
+          background-color: rgb(232, 154, 99);
+      }
+
+      .contenedor-login{
+        border-radius: 7px;
+        background-color: rgb(255, 255, 255); 
+    }
+
+    .login{
+        padding: 45px;
+        position: relative;
+        
+    }
+
+      .login-form{
+          margin: 0;
+          display: grid;
+          gap: 1px;
+      }
+
+
+      .boton-login {
+        font-family: 'Darumadrop One', cursive;
+          place-content: center;
+          border-radius: 5px;
+          border-color: aliceblue;
+          border: 1px;
+          padding: 8px;
+      
+      }
+      
+
+      .boton-login:hover{
+          background-color: rgb(232, 154, 99) ;
+          color: aliceblue;
+      }
+
+      .contenedor-datos {
+         border-color: rgb(225, 231, 240);
+         border-radius: 8px; 
+         padding: 7px;
+         border: 1px;
+         background-color:rgb(230, 231, 234);
+        margin-top: 3px;
+
+
+
+      }
+
+      .contenedor-datos:hover {
+          background-color: rgb(246, 246, 246);
+        
+      }
+      
+      a {
+          text-decoration: none;
+          color: aliceblue;
+      }
+      a:hover{
+         color: rgb(192, 100, 25);
+      }
+      
+      #Reg {
+          color:rgb(230, 231, 234);
+          font-family: 'Roboto', sans-serif;
+      }
+
+      .loginlogo {
+        font-family: 'Darumadrop One', cursive;
+        font-size: 40px;
+        text-align: center;
+        color: chocolate;
+        padding: 2px;
+        margin: 0;
+        margin-bottom: 40px;
+      }
