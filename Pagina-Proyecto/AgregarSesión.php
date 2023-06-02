@@ -27,7 +27,8 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT UserName, Email FROM usuarios WHERE UserName = '$usuario' OR Email = '$email'";
+
+$sql = "SELECT UserName, Email FROM usuariosmiau WHERE UserName = '$usuario' OR Email = '$email'";
 
 $result = $conn->query($sql);
 
