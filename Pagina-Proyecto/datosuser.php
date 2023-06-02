@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT UserName, Email, Contraseña, Nombre, Equipo FROM usuarios WHERE UserName = '$usuario'";
+$sql = "SELECT UserName, Email, Contraseña, Nombre FROM usuariosmiau WHERE UserName = '$usuario'";
 
 $result = $conn->query($sql);
 
@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
 
                     echo "Sesión iniciada correctamente";
                     $_SESSION["token"] = "SI";
-                    $_SESSION["NombreEquipo"] = $row['Equipo'];
+                    
                      $_SESSION["NommbreIntegrante1"] = $row['Nombre'];
 
 
