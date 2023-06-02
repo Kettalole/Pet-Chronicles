@@ -14,7 +14,7 @@ if (!isset ($_SESSION["token"])){
 }  
 if ($_SESSION["token"] == "SI"){
 
-echo "Nombre del equipo: " . $_SESSION["NombreEquipo"] . ".<br><br>";
+
 echo "Integrante: " . $_SESSION["NommbreIntegrante1"] . ".<br><br>";
 
 } 
