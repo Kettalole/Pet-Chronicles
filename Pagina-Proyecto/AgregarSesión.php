@@ -12,13 +12,13 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "baseingesaurios4apm";
+$dbname = "basemiau";
 
 $usuario = $_POST["user"];
 $contra = md5($_POST["pass"]);
 $email = $_POST["email"];
 $name = $_POST["name"];
-$team = $_POST["team"];
+
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
