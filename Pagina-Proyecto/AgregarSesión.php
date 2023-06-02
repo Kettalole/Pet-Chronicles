@@ -46,8 +46,8 @@ if ($result->num_rows > 0) {
           }
             else {
 
-        $sql = "INSERT INTO usuarios (UserName, Email, Contraseña, Nombre, Equipo)
-       VALUES ('$usuario', '$email', '$contra', '$name','$team')";
+      $sql = "INSERT INTO usuariosmiau (UserName, Email, Contraseña, Nombre)
+       VALUES ('$usuario', '$email', '$contra', '$name')";
 
          if ($conn->query($sql) === TRUE) {
           echo "Usuario creado correctamente, ya puede iniciar sesión.";
