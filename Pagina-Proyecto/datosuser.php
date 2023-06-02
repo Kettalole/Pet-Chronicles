@@ -14,7 +14,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "baseingesaurios4apm";
+$dbname = "basemiau";
 
 $usuario = $_POST["user"];
 $contra = md5($_POST["pass"]);
