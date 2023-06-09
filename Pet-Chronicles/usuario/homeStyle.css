@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;500&display=swap');
+
+ 
+
+*{
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+      
+    html, body{
+        height: 100%;
+    }
+
+    header{
+          width: 100%;
+          background-color: #775343;
+          display: grid;
+
+    }
+
+    body{
+          background-size: cover;
+          place-content: center;
+          margin: 0;
+          background-color: #e2d5c1;
+      }
+
+      .contenidoH {
+          width: 100%;
+          place-content: center;
+          
+      }
+
+      .admin {
+          text-decoration: none;
+          color: #fff;
+          padding: 15px;
+          align-items: right;
+      }
+
+      .adminItems{
+          text-align: right;
+          align-content: center;
+      }
