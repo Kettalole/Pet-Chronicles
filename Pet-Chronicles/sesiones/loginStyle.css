@@ -80,15 +80,17 @@
       padding-top: 8px;
       padding-bottom: 10px;
       font-size: 25px;
-      background-color: #b99b7bca;
+      background-color: #5a4531;
+    color: #ffffff;
       margin-top: 30px;
+      cursor: pointer ;
       
       
     }
       
 
     .boton-login:hover{
-      background-color: #775343;
+      background-color: #4c352a;
       color: aliceblue;
     }
     

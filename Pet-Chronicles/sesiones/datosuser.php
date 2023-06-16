@@ -19,7 +19,7 @@ $dbname = "basemiau";
 $usuario = $_POST["user"];
 $contra = md5($_POST["pass"]);
 
-$homepage = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/home.html";
+$homepage = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/home.php";
 $errorLog = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/sesiones/errorLog.html";
 $errorUs = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/sesiones/errorUs.html";
 
@@ -32,7 +32,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT UserName, Email, Contraseña, Nombre FROM usuariosmiau WHERE UserName = '$usuario'";
+$sql = "SELECT ID, UserName, Email, Contraseña, Nombre FROM usuariosmiau WHERE UserName = '$usuario'";
 
 $result = $conn->query($sql);
 
@@ -49,9 +49,15 @@ if ($result->num_rows > 0) {
               header('Location: '.$homepage);
 
 
+
+              $TablaNuevaUs = "tabla_" . $row['UserName'];
                     $_SESSION["token"] = "SI";
-                   
-                     $_SESSION["NommbreIntegrante1"] = $row['Nombre'];
+                     $_SESSION["id"] = $row['ID'];
+                     $_SESSION["tabla"] = $TablaNuevaUs;
+
+                     
+                     
+
 
 
 

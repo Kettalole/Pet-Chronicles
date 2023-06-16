@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +23,10 @@ $usuario = $_POST["user"];
 $contra = md5($_POST["pass"]);
 $email = $_POST["email"];
 $name = $_POST["name"];
+$id_primero = 1;
 
-$homepage = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/home.html";
+$homepage = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/home.php";
+$signuperror = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/sesiones/sperror.html";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -40,43 +47,54 @@ if ($result->num_rows > 0) {
 
             if($usuario == $row["UserName"] || $email == $row["Email"]){
 
-                    echo "Este usuario o email ya está registrado, inicie sesión.";
+              
+              header('Location: '.$signuperror);
      
-
             } 
           }
-            else {
+            
+          
+          
+          else {
 
         $sql = "INSERT INTO usuariosmiau (UserName, Email, Contraseña, Nombre)
        VALUES ('$usuario', '$email', '$contra', '$name')";
 
 
+$_SESSION["token"] = "SI";
+
+
        
          if ($conn->query($sql) === TRUE) {
 
-          $TablaNuevaUs = "tabla_" . $usuario;
-          $crateTableSQL = "CREATE TABLE $TablaNuevaUs
-          (
-  
-          Titulo VARCHAR(150),
-          Autor VARCHAR(50),
-          Blog VARCHAR (1500000)
-          )";
+          $sql = "SELECT ID FROM usuariosmiau WHERE UserName ='$usuario' ";
+          $result = $conn->query($sql);
+          
+     
+          if ($result->num_rows > 0) {
+            // output data of each row
+          $row = $result->fetch_assoc();
+   
+          $_SESSION["id"] = $row["ID"];
+          $_SESSION["token"] = "SI";
 
-          if ($conn->query($crateTableSQL) === TRUE) {
-            header('Location: '.$homepage);
+          header('Location: '.$homepage);
+   
+          }
+
           }else{
             echo "mamahuevo no sirves pa esto xd";
           }
 
 
-        } else {
-          echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+        } 
+        
+        
+    
         
          $conn->close();
 
-      }
+      
 
             ?>
 </body>

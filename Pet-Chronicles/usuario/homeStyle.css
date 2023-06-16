@@ -8,40 +8,71 @@
 *{
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
       
     html, body{
         height: 100%;
     }
 
-    header{
-          width: 100%;
-          background-color: #775343;
-          display: grid;
+
+
+    .contenidoH {
+      padding: 35px 0;
+      background-color: #775343;
+      display: flex;
+      height: 80px;
+     
+    }
+
+    .menu {
+      position: absolute;
+      top: 0; 
+      left: 20px;
+      right: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      
+      font-family: 'Darumadrop One', cursive;
+      font-size: 45px;
+      color: #ffffff;
+      text-decoration: none;
+      padding-left: 5px;
+      padding-bottom: 15px;
 
     }
 
-    body{
-          background-size: cover;
-          place-content: center;
-          margin: 0;
-          background-color: #e2d5c1;
-      }
 
-      .contenidoH {
-          width: 100%;
-          place-content: center;
-          
-      }
+  .menu .navbar ul li {
+    position: relative;
+   float: left;
+   size: 100px;
+   top: 3px;
+    
+   padding: 30px;
+  
 
-      .admin {
-          text-decoration: none;
-          color: #fff;
-          padding: 15px;
-          align-items: right;
-      }
+  display: block;
+  }
 
-      .adminItems{
-          text-align: right;
-          align-content: center;
-      }
+  
+a {
+  color: #ffffff;
+  list-style: none;
+}
+
+.divEscribir a {
+  color: #775343;
+  font-family: 'Geologica', sans-serif;
+}
+
+  .divBlog p{
+    font-family: 'Geologica', sans-serif;
+  }
+

@@ -81,16 +81,16 @@
         padding-top: 8px;
         padding-bottom: 10px;
         font-size: 25px;
-        background-color: #b99b7bca;
+        background-color: #5a4531;
         margin-top: 10px;
-        
-      
+        cursor: pointer ;
+        color: #ffffff;
     }
       
 
     .boton-signup:hover{
-        background-color: #775343;
-        color: aliceblue;
+        background-color: #4c352a;
+    color: aliceblue;
     }
       
     a {
@@ -112,4 +112,16 @@
         font-size: 20px;
     }
 
+    
+    .error {
+        text-align: center;
+        color: #ffffff;
+        background-color: #4c352a;
+        border-radius: 5px;
+        font-family: 'Geologica', sans-serif;
+        margin: 10px;
+        width: 385px;
+        padding: 5px;
+      }
+    
      

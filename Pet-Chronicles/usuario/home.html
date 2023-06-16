@@ -11,29 +11,122 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="homeStyle.css">
+
+
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+
+
+
+
+
+          
+          <script type="text/javascript">
+                <!--
+                function GetConfirmation(event) {
+      
+                          var RetVal = confirm("Los cambios se guardarán. ¿Desea continuar?");
+                          if (RetVal == true){
+                                    
+                                    return true;
+                          } else {
+                                    
+                              event.preventDefault();
+                                  
+                          }
+                          
+                }
+                -->
+      </script>
           <title>Inicio</title>
 </head>
 <header>
-          <div class="contenidoH">
-                    <p class="logo">Logo</p>
+        <div class='contenidoH'> 
+        
+              <div class='menu'>
+        
+                      <a href='home.php' class='logo'>Pet Chronicals <span class="material-symbols-outlined">
+                        pets
+                        </span></a>
+        
+                      <nav class='navbar'>
+                              <ul>
+                                      <li><a href='home.php'><span class='material-symbols-outlined'>
+                                              home
+                                              </span></a></li>
+                                      <li><a href='perfil.php'><span class='material-symbols-outlined'>
+                                              account_circle
+                                              </span></a></li>
+                                        
+                                              <li><a href='borrar.php'><span class='material-symbols-outlined'>
+                                                logout
+                                                </span></a></li>
+                              </ul>
+                      </nav>
+        
 
-                    <div class="adminItems">
-
-                              <a href="perfil.html" class="admin"><span class="material-symbols-outlined">
-                                        account_circle
-                              </span></a>
-                              <a href="#" class="admin"><span class="material-symbols-outlined">
-                                        edit_square
-                              </span></a>
-                              
-                    </div>
-                              
-          </div>
-</header>
+              </div>
+                      
+        </div>
+        </header>
 <body>
-          <div class="opciones">
-                    <li></li>
-          </div>
+        
+             <!--
+
+                Home, no
+
+                     <li><a href='borrar.php' class='volver'><span class="material-symbols-outlined">
+                             arrow_back_ios
+                        </span></a></li>
+
+             --> 
+
+
+        <div class='divGeneral'>
+
+                <div class='divBody'>
+
+                         <div class='divEscribir'>
+
+
+                                <a href='escribir.php'>
+                                        nuevo post <span class="material-symbols-outlined">
+                                                edit_square
+                                                </span>
+                                </a>
+
+                        </div>
+
+
+
+                        <div class='divBlog'>
+
+                                <p class='titulo'>$row[TITULO]</p>
+
+                                <p class='autor'>$row[USER]</p>
+
+                                <p class='blog'>$row[BLOG]</p>
+
+                                <img src="/$row[IMG]" height="100">
+
+                                <p class='date'>$row[DATE]</p>
+
+                        </div>
+
+                </div> 
+
+        </div>
+
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -1,0 +1,226 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;500&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body{
+  height: 100%;
+  
+}
+
+
+
+.contenidoH {
+padding: 35px 0;
+background-color: #775343;
+display: flex;
+height: 80px;
+
+}
+
+.menu {
+position: absolute;
+top: 0; 
+left: 20px;
+right: 0px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+
+font-family: 'Darumadrop One', cursive;
+font-size: 45px;
+color: #ffffff;
+text-decoration: none;
+padding-left: 20px;
+padding-bottom: 15px;
+
+}
+
+a {
+color: #ffffff;
+}
+
+
+.menu .navbar ul li {
+position: relative;
+float: left;
+
+size: 100px;
+top: 3px;
+
+padding: 20px;
+padding-left: 30px;
+display: block;
+}
+
+.perfil {
+   
+  padding-top: 100px;
+  padding-left: 40%;
+  padding-bottom: 0px;
+  position: absolute;
+  justify-content: center;
+}
+
+.contenedorperfil{
+         
+    border-radius: 7px;
+      background-color: #F4F3EE; 
+      height: 510px;
+      width: 400px;
+      text-align: center;
+      
+
+  }
+
+  
+
+  .datosUs {
+    border-color: #e2d5c1;
+    border-radius: 8px; 
+    padding: 10px;
+    border: 1px;
+    background-color:rgb(230, 231, 234);
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: 'Geologica', sans-serif;
+    color: #5a4531;
+    width: 300px;
+    text-align: center;
+    
+    
+  }
+
+  .datos {
+    margin-bottom: 25px;
+        margin-top: 15px;
+        display: grid;
+        gap: 30px;
+        padding-left: 45px;
+      padding-right: 40px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      position: relative;
+      
+  }
+
+  
+    
+  
+
+  .imguser {
+
+    position: relative;
+    align-content: center;
+    padding-top: 25px ;
+
+    
+  }
+
+  .contenedorDatosPerfil {
+    font-family: 'Darumadrop One', cursive;
+    font-size: 23px;
+    color: #4d3d36
+  }
+
+  .boton {
+    text-decoration: none;
+    font-family: 'Darumadrop One', cursive;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #5a4531;
+    margin: 5px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px;
+    cursor: pointer;
+    margin-top: 3px;
+    
+  }
+
+
+
+.boton:hover{
+    
+        background-color: #4c352a;
+        color: aliceblue;
+      
+}
+
+.datosUs2 {
+    border-color: #e2d5c1;
+    border-radius: 8px; 
+    padding: 10px;
+    border: 1px;
+    background-color:rgb(230, 231, 234);
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: 'Geologica', sans-serif;
+    color: #5a4531;
+    width: 310px;
+    text-align: center;
+    
+
+  }
+
+  .datosUs2:hover {
+    background-color: #b99b7bca;
+  }
+
+  .botonACTU{
+    
+    font-family: 'Darumadrop One', cursive;
+    font-size: 20px;
+    border: 1px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #5a4531;
+    color: #ffffff;
+    cursor: pointer ;
+    text-decoration: none;
+  }
+
+  .botonACTU:hover {
+    background-color: #4c352a;
+    color: aliceblue;
+  }
+
+  .back {
+    color: #4c352a;
+  }
+
+  .error {
+    text-align: center;
+    color: #ffffff;
+    background-color: #4c352a;
+    border-radius: 5px;
+    font-family: 'Geologica', sans-serif;
+    margin: 10px;
+    width: 400px;
+    padding: 5px;
+    
+   
+
+
+  }
+
+  .errordiv {
+    padding-left: 34.5%;
+    padding-right: 35%;
+  }
