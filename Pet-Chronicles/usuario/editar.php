@@ -11,6 +11,8 @@ $password = "";
 $dbname = "basemiau";
 $perfil = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/perfil.php";
 $editerror = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/erroreditar.php";
+$erroremail = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/erroremail.php";
+$erroruser = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/erroruser.php";
 
 $nombre = $_POST["nombre"];
 $user = $_POST["user"];
@@ -45,64 +47,65 @@ if ($result->num_rows > 0) {
 
 
 
-          
-        if ($user == $row["UserName"] && $email == $row["Email"]){
 
-            echo "el usuario y/o email no estan disponibles";
-            header('Location: '.$editerror);
-
-           } 
-
+//si solo el email no esta disponible
 
            if ($user != $row["UserName"] && $email == $row["Email"]){
 
-  $sql = "UPDATE usuariosmiau SET UserName = '$user' WHERE ID='$id' ";
+header('Location: '.$erroremail);
 
-         if ($conn->query($sql) === TRUE) {
-      header('Location: '.$perfil);
-    } else {
-      echo "Error updating record: " . $conn->error;
-    }
 
 } 
+
+//si solo el usuario no está disponible
 
          if ($user == $row["UserName"] && $email != $row["Email"]){
-
-  $sql = "UPDATE usuariosmiau SET Email ='$email' WHERE ID='$id' ";
-
-  if ($conn->query($sql) === TRUE) {
-      header('Location: '.$perfil);
-    } else {
-      echo "Error updating record: " . $conn->error;
-    }
+         
+          header('Location: '.$erroruser);
+          
 
 }
 
-     if ($user == $row["UserName"] && $email == $row["Email"] && $nombre != $row["Nombre"]){
 
-       $sql = "UPDATE usuariosmiau SET Nombre = '$nombre'  WHERE ID='$id' ";
+//si ninguno está disponible
+
+     if ($user == $row["UserName"] && $email == $row["Email"]){
+
+     
+    header('Location: '.$editerror);
+ 
+     }
+
+//si todos estn disponibles
+
+if ($user != $row["UserName"] && $email != $row["Email"] && $nombre != $row["Nombre"]){
+
+  $sql = "UPDATE usuariosmiau SET  Email ='$email', Nombre = '$nombre', UserName = '$user' WHERE ID='$id' ";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: '.$perfil);
-  } else {
-    echo "Error updating record: " . $conn->error;
-  }
+header('Location: '.$perfil);
+} else {
+echo "Error updating record: " . $conn->error;
+}
 
-} 
-
-
-       else{
-
-              $sql = "UPDATE usuariosmiau SET UserName = '$user', Email ='$email', Nombre = '$nombre'  WHERE ID='$id' ";
-
-if ($conn->query($sql) === TRUE) {
-    header('Location: '.$perfil);
-  } else {
-    echo "Error updating record: " . $conn->error;
-  }
 
 
 }
+
+//si ninguno está disponible PERO el nombre cambia
+
+if ($user == $row["UserName"] && $email == $row["Email"] && $nombre != $row["Nombre"]){
+
+  $sql = "UPDATE usuariosmiau SET Nombre = '$nombre'  WHERE ID='$id' ";
+
+if ($conn->query($sql) === TRUE) {
+header('Location: '.$perfil);
+} else {
+echo "Error updating record: " . $conn->error;
+}
+
+}
+
 
 }
 }

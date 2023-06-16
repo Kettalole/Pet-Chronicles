@@ -7,9 +7,11 @@ session_start();
 <head>
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="perfilStyle.css">
           <title>Perfil</title>
@@ -58,41 +60,34 @@ $row = $result->fetch_assoc();
 
 echo "   
 <header>
-    <div class='contenidoH'> 
+        <div class='contenidoH'> 
+        
+              <div class='menu'>
+        
+                      <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>
+                        pets
+                        </span></a>
+        
+                      <nav class='navbar'>
+                              <ul>
+                                      <li><a href='home.php'><span class='material-symbols-outlined'>
+                                              home
+                                              </span></a></li>
+                                      <li><a href='perfil.php'><span class='material-symbols-outlined'>
+                                              account_circle
+                                              </span></a></li>
+                                        
+                                              <li><a href='borrar.php'><span class='material-symbols-outlined'>
+                                                logout
+                                                </span></a></li>
+                              </ul>
+                      </nav>
+        
 
-          <div class='menu'>
-
-                  <a href='home.php' class='logo'>Pet Chronicals</a>
-
-                  <nav class='navbar'>
-                          <ul>
-                                  <li><a href='home.php'><span class='material-symbols-outlined'>
-                                          home
-                                          </span></a></li>
-                                  <li><a href='perfil.php'><span class='material-symbols-outlined'>
-                                          account_circle
-                                          </span></a></li>
-                                          <li><a href='borrar.php'><span class='material-symbols-outlined'>
-                                            logout
-                                            </span></a></li>
-                          </ul>
-                  </nav>
-
-
-
-
-
-
-
-
-          </div>
-              
-
-                        
-              
-                        
-    </div>
-</header>
+              </div>
+                      
+        </div>
+        </header>
 
                             <body> 
                             <div class='perfil'>
@@ -131,7 +126,7 @@ echo "
 
                             <div class='errordiv'>
 
-                            <p class='error'>¡el usario y/o email ya están registrados!</p>
+                            <p class='error'>¡el usario e email ya están registrados!</p>
                             </div>
                             </body>
 ";

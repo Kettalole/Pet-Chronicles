@@ -7,29 +7,13 @@ session_start();
 <head>
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">  
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="perfilStyle.css">
-          <script type="text/javascript">
-          <!--
-          function GetConfirmation() {
-
-                    var RetVal = confirm("La cuenta se eliminará. ¿Desea continuar?");
-                    if (RetVal == true){
-                              
-                              return true;
-                              
-                    } else {
-                              
-                              event.preventDefault();
-                            
-                    }
-                    
-          }
-          -->
-</script>
           <title>Perfil</title>
 </head>
  
@@ -42,7 +26,7 @@ $username = "root";
 $password = "";
 $dbname = "basemiau";
 $paghome = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/sesiones/paghome.html";
-$borrarPHP = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/borrarcuenta.php";
+
 
 
 if (!isset ($_SESSION["token"])){
@@ -105,46 +89,47 @@ echo "
         </div>
         </header>
 
+                            <body> 
+                            <div class='perfil'>
+                            
+                            
+                            <div class='contenedorperfil'>
+                            <div class='imguser'><img height=80 width=80 src='pfp.png'></img></div> 
+                            
+                            <div class='datos'>
+                                <div class='contenedorDatosPerfil'>
+                                <form class='contenedorDatosPerfil' action='editar.php' method='post'>
+                                
+                            Nombre:
+                            <input class='datosUs2' type='text' name='nombre' value='$row[Nombre]' ><br>
+                            
+                            
+                            
+                            
+                            Usuario:
+                            <input class='datosUs2' type='text' name='user' value='$row[UserName]'><br>
+                            
+                            
+                            
+                            
+                            Email:<br>
+                            <input class='datosUs2' type='email' name='email' value='$row[Email]' ><br>
+                            <button type='submit' class='botonACTU' >guardar cambios</button>
+                            <a class='botonACTU' href='perfil.php'>cancelar</a>
+                            </form>
+                            </div>
+                            
+                        </div>
+                    
+                </div>
+                            </div>
 
+                            <div class='errordiv'>
 
-    <body> 
-    
-    <div class='perfil'>
-    
-    
-    <div class='contenedorperfil'>
-    <div class='imguser'><img height=80 width=80 src='pfp.png'></img></div> 
-    
-    <div class='datos'>
-        <div class='contenedorDatosPerfil'>
-
-        
-    Nombre:
-    <p class='datosUs'>
-    $row[Nombre]</p>
-    
-    
-    
-    Usuario:
-    <p class='datosUs'>
-    $row[UserName]</p>
-    
-    
-    
-    Email:
-    <p class='datosUs'>
-    $row[Email]</p>
-
-    </div>
-
-    </div>
-<a class='boton' href='editarpf.php'>editar perfil</a>
-<a class='boton' href='borrarcuenta.php' onclick='GetConfirmation()'>eliminar cuenta</a>
-    </div>
-    
-    </body>
+                            <p class='error'>¡el email ya está registrado!</p>
+                            </div>
+                            </body>
 ";
-
 
 
 

@@ -17,7 +17,9 @@ session_start();
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="homeStyle.css">
           <title>Inicio</title>
@@ -71,6 +73,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
 $row = $result->fetch_assoc();
+//Selecciona los datos de la tabla 'blog'
+
+
+
+
+
+
 //toda la pagina echo
 
 echo "<header>
@@ -78,7 +87,9 @@ echo "<header>
 
       <div class='menu'>
 
-              <a href='home.php' class='logo'>Pet Chronicals</a>
+              <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>
+                pets
+                </span></a>
 
               <nav class='navbar'>
                       <ul>
@@ -88,25 +99,16 @@ echo "<header>
                               <li><a href='perfil.php'><span class='material-symbols-outlined'>
                                       account_circle
                                       </span></a></li>
+                                
                                       <li><a href='borrar.php'><span class='material-symbols-outlined'>
-                                            logout
-                                            </span></a></li>
+                                        logout
+                                        </span></a></li>
                       </ul>
               </nav>
 
 
-
-
-
-
-
-
       </div>
-          
-
-                    
-          
-                    
+              
 </div>
 </header>";
 

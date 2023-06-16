@@ -22,25 +22,6 @@
 
 
 
-
-          
-          <script type="text/javascript">
-                <!--
-                function GetConfirmation(event) {
-      
-                          var RetVal = confirm("Los cambios se guardarán. ¿Desea continuar?");
-                          if (RetVal == true){
-                                    
-                                    return true;
-                          } else {
-                                    
-                              event.preventDefault();
-                                  
-                          }
-                          
-                }
-                -->
-      </script>
           <title>Inicio</title>
 </head>
 <header>
@@ -92,7 +73,8 @@
                          <div class='divEscribir'>
 
 
-                                <a href='escribir.php'>
+                                <a
+                                href='escribir.php'>
                                         nuevo post <span class="material-symbols-outlined">
                                                 edit_square
                                                 </span>
@@ -104,15 +86,19 @@
 
                         <div class='divBlog'>
 
-                                <p class='titulo'>$row[TITULO]</p>
+                                <div class='contenedorBlog'>
 
-                                <p class='autor'>$row[USER]</p>
-
-                                <p class='blog'>$row[BLOG]</p>
-
-                                <img src="/$row[IMG]" height="100">
-
-                                <p class='date'>$row[DATE]</p>
+                                        
+                                        <p class='titulo'>$row[TITULO]</p>
+                                        
+                                        <p class='autor'>de $row[USER]</p>
+                        
+                                        <p class='blog'>$row[BLOG]</p>
+                                        
+                                        <img class='img' src="/$row[IMG]" height="100">
+                                        
+                                        <p class='date'>fecha de publicación: $row[DATE]</p>
+                                </div>
 
                         </div>
 
