@@ -22,6 +22,22 @@ session_start();
     text-decoration: none;
     font-size: 25px;
   }
+
+  .nohay {
+
+text-align: center;
+padding: 30px;
+background-color: #ffffff;
+width: auto;
+height: auto;
+margin: 70px;
+margin-top: 200px;
+color: #775343;
+font-family: 'Geologica', sans-serif;
+border-radius: 10px;
+font-size: 30px;
+
+}
           </style>
     <title>Inicio</title>
     <script type="text/javascript">
@@ -116,7 +132,7 @@ if ($_SESSION["token"] == "SI") {
                 
             } 
         } else {
-            echo "tabla vacía";
+            echo " <p class='nohay'>¡Aún no tienes publicaciones!</p>";
         }
     } else {
         echo "¡Aun no tienes post!";

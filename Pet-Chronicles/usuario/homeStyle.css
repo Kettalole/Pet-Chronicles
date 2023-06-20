@@ -247,3 +247,18 @@ color: #775343;
  
 
 
+.nohay {
+
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+  width: auto;
+  height: auto;
+  margin: 70px;
+  margin-top: 200px;
+  color: #775343;
+  font-family: 'Geologica', sans-serif;
+  border-radius: 10px;
+  font-size: 30px;
+
+}
