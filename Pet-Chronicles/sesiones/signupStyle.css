@@ -20,6 +20,7 @@
         place-content: center;
         margin: 0;
         background-color: #e2d5c1;
+       
     }
 
     .contenedor-signup{
@@ -97,16 +98,17 @@
         
         text-decoration: solid;
         font-family: 'Geologica', sans-serif;
-        color: #5a4531;
+       
+        color: #8f7154;
     }
 
     a:hover{
-        color: #a28465;
+      color: #5a4531;
     }
       
     #Ini {
         margin-top: 30px;
-        color: #a28465;
+        color: #664f3a;
         font-family: 'Geologica', sans-serif;
         text-align: center;
         font-size: 20px;

@@ -13,8 +13,9 @@
   list-style: none;
 }
 
-html, body{
+body{
   height: 100%;
+  margin: auto;
 }
 
 
@@ -225,4 +226,24 @@ a {
     width: 390px;
     height: auto;
     margin: auto;
+  }
+
+  .blogs{
+    margin: auto;
+    align-items: center;
+  }
+
+  .boton2{
+    text-decoration: none;
+    font-family: 'Darumadrop One', cursive;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #5a4531;
+    margin: 5px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px;
+    cursor: pointer;
+    margin-top: 3px;
+    
   }

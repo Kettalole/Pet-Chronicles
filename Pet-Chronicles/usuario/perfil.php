@@ -12,6 +12,15 @@ session_start();
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="perfilStyle.css">
+          <style>
+            body{
+
+                background-image: url('fondoPC2.png');
+                background-size: cover;
+                
+            }
+         
+          </style>
           <script type="text/javascript">
           <!--
           function GetConfirmation() {
@@ -138,8 +147,9 @@ echo "
     </div>
 
     </div>
-<a class='boton' href='editarpf.php'>editar perfil</a>
-<a class='boton' href='borrarcuenta.php' onclick='GetConfirmation()'>eliminar cuenta</a>
+    <a class='boton' href='editarpf.php'>editar perfil</a>
+    <!--<a class='boton' href='borrarcuenta.php' onclick='GetConfirmation()'>eliminar cuenta</a> -->
+    <a href='misblogs.php' class='boton2'>mis blogs</a>
     </div>
     
     </body>

@@ -15,6 +15,7 @@
       
     html, body{
         height: 100%;
+        
     }
 
 
@@ -87,13 +88,6 @@ a {
 
 }
 
-.divEscribir a {
-  color: #ffffff;
-  font-family: 'Geologica', sans-serif;
-  font-size: 25px;
-  text-decoration: none;
-  
-}
 
 .divBlog{
   margin: auto;
@@ -109,7 +103,7 @@ height: auto;
 }
 
 .contenedorBlog{
-  background-color: #e0aeae; 
+  background-color: #F4F3EE; 
   border-radius: 8px;
   height: auto;
   width: 1200px;
@@ -151,5 +145,109 @@ height: auto;
     text-align: right;
   }
 
+  .titulo-input {
+    font-family: 'Geologica', sans-serif;
+    font-size: 20px;
+   
+    border-radius: 8px;
+color: #775343;
+    width: 1000px;
+    padding: 10px;
+    margin: 20px;
+    border-color: #775343;
+
+  }
+
+  .titulo-input:hover {
+    background-color: #f4f3eec4; 
+  }
+
+  .blog-input {
+    font-family: 'Geologica', sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+    color: #775343;
+    margin: auto;
+    width: 1000px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+    border-color: #775343;
+    word-wrap: break-word;
+
+  }
+
+  .blog-input:hover {
+    background-color: #f4f3eec4; 
+  }
+
+  .boton-submit {
+    background-color: #775343;
+  height: 50px;
+  width: 150px;
+  border-radius: 8px;
+  text-align: center;
+  margin: auto;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  border: 1px;
+  color: #ffffff;
+  font-family: 'Geologica', sans-serif;
+  font-size: 25px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 9.5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 20px;
+  }
+
+  .img-inputDIV{
+    position: relative;
+  display: inline-block;
+  }
   
+  .img-inputDIV::before{
+    background-color: #775343;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  content: 'subir imagen'; /* testo por defecto */
+  position: absolute;
+  font-family: 'Geologica', sans-serif;
+  font-size: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 10px;
+   
+  }
+
+  .img-inputDIV input[type='file']{
+    opacity: 0;
+  width: 150;
+  height: 40px;
+  display: inline-block;
+  }
+
+  .boton-submit:hover{
+    background-color: #8f5e4a;
+  }
+
+  .nuevo{
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  .volver{
+  
+   
+  
+  }
+
 

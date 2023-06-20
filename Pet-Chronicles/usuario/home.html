@@ -29,7 +29,7 @@
         
               <div class='menu'>
         
-                      <a href='home.php' class='logo'>Pet Chronicals <span class="material-symbols-outlined">
+                      <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>
                         pets
                         </span></a>
         
@@ -48,71 +48,83 @@
                               </ul>
                       </nav>
         
-
+        
               </div>
                       
         </div>
         </header>
-<body>
+        <body>
+                
+                     
         
-             <!--
-
-                Home, no
-
-                     <li><a href='borrar.php' class='volver'><span class="material-symbols-outlined">
-                             arrow_back_ios
-                        </span></a></li>
-
-             --> 
-
-
-        <div class='divGeneral'>
-
-                <div class='divBody'>
-
-                         <div class='divEscribir'>
-
-
-                                <a
-                                href='escribir.php'>
-                                        nuevo post <span class="material-symbols-outlined">
-                                                edit_square
-                                                </span>
-                                </a>
-
-                        </div>
+                      
+        
+                             <li><a href='borrar.php' class='volver'><span class='material-symbols-outlined'>
+                                     arrow_back_ios
+                                </span></a></li>
+        
+                     
+        
+        
+                <div class='divGeneral'>
+        
+                        <div class='divBody'>
+        
+                                
+        
+        
+        
+                                <div class='divBlog'>
+        
+                                        <div class='contenedorBlog'>
+        
+                                                <form action='subirblog.php' method='post'>
 
 
+                                                        <textarea type='text' cols='1' rows='auto' class='titulo-input' name='titulo' placeholder='titulo' required></textarea> <br>
+                                                        
+                                                        <textarea type='text' cols='1' rows='10' class='blog-input' name='blog' placeholder='¿qué nos vas a contar?' required></textarea>
+                                                        
+                                                        
+                                                        <div class='img-inputDIV'>
+                                                                <input type='file' name='imagen' class='img-input'/>
+                                                        </div> 
 
-                        <div class='divBlog'>
+                                                        <br>
+                                                        
+                                                        
+                                                </div>
+                                                
+                                                <div class="botones">
 
-                                <div class='contenedorBlog'>
-
+                                                        <button type='submit' class='boton-submit'>publicar</button>  
+                                                        
+                                                        </form>
+                                               
+                                                        
+                                                        
+                                                        
+                                                        <a
+                                                        href='escribir.php' class='boton-submit'>
+                                                        cancelar</a>
+                                                
                                         
-                                        <p class='titulo'>$row[TITULO]</p>
                                         
-                                        <p class='autor'>de $row[USER]</p>
-                        
-                                        <p class='blog'>$row[BLOG]</p>
+                                                </div> 
                                         
-                                        <img class='img' src="/$row[IMG]" height="100">
-                                        
-                                        <p class='date'>fecha de publicación: $row[DATE]</p>
                                 </div>
-
-                        </div>
-
-                </div> 
-
-        </div>
-
-
-
-
-
-
-
-
-
-</body>
+                                
+                        </div> 
+                        
+                </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </body>
 </html>

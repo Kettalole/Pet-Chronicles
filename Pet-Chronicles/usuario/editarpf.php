@@ -15,6 +15,18 @@ $perfil = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/perfil.php";
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="perfilStyle.css">
+          <style>
+            body{
+
+                background-image: url('fondoPC2.png');
+                background-size: cover;
+                
+            }
+            .nuevo{
+    text-decoration: none;
+    font-size: 25px;
+  }
+          </style>
           <script type="text/javascript">
           <!--
           function GetConfirmation(event) {

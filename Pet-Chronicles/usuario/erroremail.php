@@ -14,6 +14,35 @@ session_start();
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
           <link rel="stylesheet" href="perfilStyle.css">
+          <style>
+            body{
+
+                background-image: url('fondoPC2.png');
+                background-size: cover;
+                
+            }
+            .nuevo{
+    text-decoration: none;
+    font-size: 25px;
+  }
+          </style>
+           <script type="text/javascript">
+          <!--
+          function GetConfirmation(event) {
+
+                    var RetVal = confirm("Los cambios se guardarán. ¿Desea continuar?");
+                    if (RetVal == true){
+                              
+                              return true;
+                    } else {
+                              
+                        event.preventDefault();
+                            
+                    }
+                    
+          }
+          -->
+</script>
           <title>Perfil</title>
 </head>
  
@@ -114,7 +143,7 @@ echo "
                             
                             Email:<br>
                             <input class='datosUs2' type='email' name='email' value='$row[Email]' ><br>
-                            <button type='submit' class='botonACTU' >guardar cambios</button>
+                            <button type='submit' onclick='GetConfirmation()' class='botonACTU'>guardar cambios</button>
                             <a class='botonACTU' href='perfil.php'>cancelar</a>
                             </form>
                             </div>
