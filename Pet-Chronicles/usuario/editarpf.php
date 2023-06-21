@@ -26,6 +26,35 @@ $perfil = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/perfil.php";
     text-decoration: none;
     font-size: 25px;
   }
+  .botonACTUBR {
+    font-family: 'Darumadrop One', cursive;
+    font-size: 20px;
+    border: 1px;
+    padding: 10px;
+    
+    margin: .7px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    background-color: #5a4531;
+    color: #ffffff;
+    cursor: pointer ;
+    text-decoration: none;
+  }
+
+  .contenedorperfil2{
+         
+         border-radius: 7px;
+           background-color: #F4F3EE; 
+           height: 590PX;
+           width: 400px;
+           text-align: center;
+           word-wrap: break-word;
+           
+     
+       }
+
+
           </style>
           <script type="text/javascript">
           <!--
@@ -42,6 +71,22 @@ $perfil = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/perfil.php";
                     }
                     
           }
+
+          function GetConfirmationDelete(event) {
+
+var RetVal = confirm("La cuenta se borrará. ¿Desea continuar?");
+if (RetVal == true){
+          
+          return true;
+} else {
+          
+    event.preventDefault();
+        
+}
+
+}
+
+
           -->
 </script>
           <title>Perfil</title>
@@ -97,7 +142,7 @@ echo "
         
               <div class='menu'>
         
-                      <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>
+                      <a href='home.php' class='logo'>Pet Chronicles <span class='material-symbols-outlined'>
                         pets
                         </span></a>
         
@@ -125,7 +170,7 @@ echo "
                             <div class='perfil'>
                             
                             
-                            <div class='contenedorperfil'>
+                            <div class='contenedorperfil2'>
                             <div class='imguser'><img height=80 width=80 src='pfp.png'></img></div> 
                             
                             <div class='datos'>
@@ -139,18 +184,23 @@ echo "
                             
                             
                             Usuario:
-                            <input class='datosUs2' type='text' name='user' value='$row[UserName]'><br>
+                            <p class='datosUs'>
+                            $row[UserName]</p>
                             
                             
                             
-                            
-                            Email:<br>
-                            <input class='datosUs2' type='email' name='email' value='$row[Email]' ><br>
-                            <button type='submit' onclick='GetConfirmation()' class='botonACTU'>guardar cambios</button>
+                            Email:
+                            <p class='datosUs'>
+                            $row[Email]</p>
+                            <button type='submit' onclick='GetConfirmation(event)' class='botonACTU'>guardar cambios</button>
                             <a class='botonACTU' href='perfil.php'>cancelar</a>
                             </form>
                             </div>
+
+                         
+                            <a onclick='GetConfirmationDelete(event)' class='botonACTUBR' href='borrarcuenta.php'>borrar cuenta</a>
                             
+
                         </div>
                     
                 </div>

@@ -38,13 +38,45 @@ border-radius: 10px;
 font-size: 30px;
 
 }
+.boton-submit {
+    background-color: #775343;
+  height: 50px;
+  width: 150px;
+  border-radius: 8px;
+  text-align: center;
+  margin: auto;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  border: 1px;
+  color: #ffffff;
+  font-family: 'Geologica', sans-serif;
+  font-size: 25px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 9.5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  }
+
+  .misBotones{
+    
+     margin-left: 440px;
+      display: flex;
+      
+ 
+
+  }
           </style>
-    <title>Inicio</title>
+    <title>Mis blogs</title>
     <script type="text/javascript">
         function GetConfirmation() {
-            var RetVal = confirm("¿Desea continuar?");
+            var RetVal = confirm("La publicación se borrará. ¿Desea continuar?");
             if (RetVal == true) {
-                document.write("El usuario desea continuar.");
+                
                 return true;
             } else {
                 event.preventDefault();
@@ -90,7 +122,7 @@ if ($_SESSION["token"] == "SI") {
         <header>
             <div class='contenidoH'>
                 <div class='menu'>
-                    <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>pets</span></a>
+                    <a href='home.php' class='logo'>Pet Chronicles <span class='material-symbols-outlined'>pets</span></a>
                     <nav class='navbar'>
                         <ul>
                             <li><a href='home.php'><span class='material-symbols-outlined'>home</span></a></li>
@@ -114,6 +146,8 @@ if ($_SESSION["token"] == "SI") {
         if ($result->num_rows > 0) {
             // Recorrer cada fila de datos y mostrarla
             while ($row = $result->fetch_assoc()) {
+
+
                 echo "
                 <div class='divGeneral'>
                     <div class='divBody'>
@@ -125,8 +159,25 @@ if ($_SESSION["token"] == "SI") {
                                 <img class='img' src='../imagenes/$row[IMAGEN_NOMBRE]'  height='300'>
                                 <p class='date'>fecha de publicación: " . $row['DATEBLOG'] . "</p>
                                 
-                            </div>
-                        </div>
+                                <div class='misBotones'>
+                                <form action='borrarblog.php' method='post'>
+                                    <input type='hidden' name='id' value ='$row[ID]'>
+                                    <button type='submit' onclick='GetConfirmation(event)' class='boton-submit'>eliminar</button>
+                                    </form>
+                                
+                                
+                                    <form action='editarblog.php' method='post'>
+                                    <input type='hidden' name='id' value ='$row[ID]'>
+                                    <button type='submit' class='boton-submit'>editar</button>
+                                    </form>
+                                    </div>
+                                                               
+                                
+                                </div>
+
+
+
+                                </div>
                     </div>
                 </div>";
                 
@@ -144,4 +195,10 @@ if ($_SESSION["token"] == "SI") {
 }
 ?>
 </body>
+
+<!--
+                                
+                                                                    
+                                                            
+-->
 </html>

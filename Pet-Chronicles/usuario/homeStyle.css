@@ -262,3 +262,18 @@ color: #775343;
   font-size: 30px;
 
 }
+
+.botonACTU{
+    
+  font-family: 'Darumadrop One', cursive;
+  font-size: 20px;
+  border: 1px;
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 4px;
+  border-radius: 10px;
+  background-color: #5a4531;
+  color: #ffffff;
+  cursor: pointer ;
+  text-decoration: none;
+}

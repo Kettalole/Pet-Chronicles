@@ -89,7 +89,7 @@ echo "
         
               <div class='menu'>
         
-                      <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>
+                      <a href='home.php' class='logo'>Pet Chronicles <span class='material-symbols-outlined'>
                         pets
                         </span></a>
         
@@ -148,7 +148,6 @@ echo "
 
     </div>
     <a class='boton' href='editarpf.php'>editar perfil</a>
-    <!--<a class='boton' href='borrarcuenta.php' onclick='GetConfirmation()'>eliminar cuenta</a> -->
     <a href='misblogs.php' class='boton2'>mis blogs</a>
     </div>
     

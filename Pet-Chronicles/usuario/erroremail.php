@@ -93,7 +93,7 @@ echo "
         
               <div class='menu'>
         
-                      <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>
+                      <a href='home.php' class='logo'>Pet Chronicles <span class='material-symbols-outlined'>
                         pets
                         </span></a>
         

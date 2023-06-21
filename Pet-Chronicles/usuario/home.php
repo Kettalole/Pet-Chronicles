@@ -87,7 +87,7 @@ if ($_SESSION["token"] == "SI") {
         <header>
             <div class='contenidoH'>
                 <div class='menu'>
-                    <a href='home.php' class='logo'>Pet Chronicals <span class='material-symbols-outlined'>pets</span></a>
+                    <a href='home.php' class='logo'>Pet Chronicles <span class='material-symbols-outlined'>pets</span></a>
                     <nav class='navbar'>
                         <ul>
                             <li><a href='home.php'><span class='material-symbols-outlined'>home</span></a></li>

@@ -58,7 +58,7 @@ $row = $result->fetch_assoc();
 echo "   
 <header>
     <div class='contenidoH'>
-                        <p class='logo'>Pet Chronicals</p>
+                        <p class='logo'>Pet Chronicles</p>
     
                         <div class='adminItems'>
                         <a href='home.php' class='admin'><span class='material-symbols-outlined'>

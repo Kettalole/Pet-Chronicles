@@ -10,6 +10,7 @@ $username = "root";
 $password = "";
 $dbname = "basemiau";
 $paghome = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/sesiones/paghome.html";
+$misblogs = "http://127.0.0.1/Ingesaurios4APM/Pet-Chronicles/usuario/misblogs.php";
 
 
 
@@ -30,29 +31,16 @@ if ($conn->connect_error) {
   
 }
 
+//aquí borra el post
 
-$sql = "SELECT ID, UserName, Email, Nombre FROM usuariosmiau WHERE ID='$id' ";
-$result = $conn->query($sql);
-
-
-
-if ($result->num_rows > 0) {
-  // output data of each row
-$row = $result->fetch_assoc();
-$USER = $row["UserName"];
+$id_blog = $_POST['id'];
 
 
-
-$sql = "DELETE FROM usuariosmiau WHERE ID='$id'";
+$sql = "DELETE FROM blog WHERE ID ='$id_blog'";
 
 if ($conn->query($sql) === TRUE) {
 
-session_unset();
-session_destroy();
-
-
-
-    header('Location: '.$paghome);
+    header('Location: '.$misblogs);
 } else {
     echo "Error deleting record: " . $conn->error;
 }
@@ -61,39 +49,9 @@ session_destroy();
 
 
 
-
-$sql = "DELETE FROM blog WHERE USER ='$USER'";
-
-if ($conn->query($sql) === TRUE) {
-
-    header('Location: '.$paghome);
-} else {
-    echo "Error deleting record: " . $conn->error;
-}
-
-
-
-
-
-
-
-
-
-
-
-$conn->close();
-
-}
 
 } if ($_SESSION["token"] == "NO") {
 
     header('Location: '.$paghome);
 
 }
-
-
-
-
-?>
-</body>
-</html>
